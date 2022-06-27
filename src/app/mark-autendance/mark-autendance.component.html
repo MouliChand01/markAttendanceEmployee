@@ -1,0 +1,66 @@
+<div class="container container-margin">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <div class="header">
+          <input type="date" name="selectedDate" [(ngModel)]="selectedDate" style="width: 200px; ;height: 35px;"
+            class="form-control" (change)="onDataChange()"> &nbsp;&nbsp;
+          <select style="width: 250px ;height: 35px;" class="form-control" (change)="onselected($event)">
+            <option selected hidden>Select Employee Batch</option>
+            <option value="OLIC_600">OLIC_600</option>
+            <option value="OLIC_800">OLIC_800</option>
+            <option value="OLIC_900">OLIC_900</option>
+          </select> &nbsp;&nbsp;
+      </div>
+
+      <div class="table">
+        <table>
+          <thead>
+           
+            <th>Sno</th>
+            <th>EMP ID</th>
+            <th>EMP Name</th>
+            <th>EMP Email</th>
+            <th>EMP Batch</th>
+            <th>Auttend Date</th>
+            <th>Auttend Status</th>
+          </thead>
+          <tbody *ngFor="let user of allUsers;let i=index">
+            <td>
+              <input type="checkbox" name="select" (change)="seletedID(i+1)">&nbsp;
+                {{i+1}}</td>
+            <td>{{user?.empID}}</td>
+            <td>{{user?.firstName}}</td>
+            <td>{{user?.email}}</td>
+            <td>{{user?.batch}}</td>
+            <td>{{selectedDate}}</td>
+            <td>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" [name]="user?.firstName" [checked]="user[selectedDate] === 'Present'" id="inlineRadio1" value="Present"
+                  (change)="onRadioChange($event,user?.empID)">
+                <label class="form-check-label" for="inlineRadio1">Present</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" [name]="user?.firstName" [checked]="user[selectedDate] === 'Absent'" id="inlineRadio2" value="Absent"
+                  (change)="onRadioChange($event,user?.empID)">
+                <label class="form-check-label" for="inlineRadio2">Absent</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" [name]="user?.firstName" [checked]="user[selectedDate] === 'Deployed'" id="inlineRadio3" value="Deployed"
+                  (change)="onRadioChange($event,user?.empID)">
+                <label class="form-check-label" for="inlineRadio3">Deployed</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" [name]="user?.firstName" [checked]="user[selectedDate] === 'OfDayLeave'" id="inlineRadio4"
+                  value="OfDayLeave" (change)="onRadioChange($event,user?.empID)">
+                <label class="form-check-label" for="inlineRadio4">OfDayLeave</label>
+              </div>
+            </td>
+          </tbody>
+        </table>
+        <br>
+        <input type="button" value="Save Autendance" class="btn btn-warning" (click)="updateAuttendence()"> &nbsp;&nbsp;
+        <input type="button" value="Del" class="btn btn-danger" (click)="delatedRow()">
+      </div>
+    </div>
+  </div>
+</div>

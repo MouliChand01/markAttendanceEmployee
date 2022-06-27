@@ -1,0 +1,71 @@
+{
+  "OILC-600": [
+    {
+      "empID": 21312,
+      "firstName": "Mouli",
+      "lastName": "Ramadasu",
+      "batch": "OILC-600",
+      "email": "mouli.ramadasu@ojas-it.com"
+    },
+    {
+      "empID": 21310,
+      "firstName": "SaiKrishna",
+      "lastName": "Domdapoeina",
+      "batch": "OILC-600",
+      "email": "krishna@ojas-it.com"
+    },
+    {
+      "empID": 21321,
+      "firstName": "SivaSai",
+      "lastName": "kumar",
+      "batch": "OILC-600",
+      "email": "siva@ojas-it.com"
+    }
+  ],
+  "OILC-800": [
+    {
+      "empID": 21312,
+      "firstName": "Rohan",
+      "lastName": "kalavala",
+      "batch": "OILC-800",
+      "email": "rohanKalavala@ojas-it.com"
+    },
+    {
+      "empID": 21310,
+      "firstName": "Saravani",
+      "lastName": "pittla",
+      "batch": "OILC-800",
+      "email": "SaravaniPittila@ojas-it.com"
+    },
+    {
+      "empID": 21321,
+      "firstName": "Aijay",
+      "lastName": "samayta",
+      "batch": "OILC-800",
+      "email": "ajay@ojas-it.com"
+    }
+  ],
+  "OILC-900": [
+    {
+      "empID": 21312,
+      "firstName": "Srivani",
+      "lastName": "sri",
+      "batch": "OILC-900",
+      "email": "srivani@ojas-it.com"
+    },
+    {
+      "empID": 21310,
+      "firstName": "Suresh",
+      "lastName": "digavarth",
+      "batch": "OILC-900",
+      "email": "Suresh@ojas-it.com"
+    },
+    {
+      "empID": 21321,
+      "firstName": "vinay",
+      "lastName": "gamgula",
+      "batch": "OILC-900",
+      "email": "vinaygamggla@ojas-it.com"
+    }
+  ]
+}

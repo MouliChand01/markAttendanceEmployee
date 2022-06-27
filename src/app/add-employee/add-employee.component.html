@@ -1,0 +1,40 @@
+<div class="container container-margin">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <div class="header">
+                <select style="width: 250px ;height: 35px;" class="form-control" (change)="onselected($event)">
+                    <option selected hidden>Select Employee Batch</option>
+                    <option value="OLIC_600">OLIC_600</option>
+                    <option value="OLIC_800">OLIC_800</option>
+                    <option value="OLIC_900">OLIC_900</option>
+                </select> &nbsp;&nbsp;
+                <input class="btn btn-primary" type="button" value="Load Data">
+            </div>
+            <hr>
+            <form autocomplete="off">
+                <div class="body">
+                    <div>
+                        <label for="empID">EMP ID</label>&nbsp;
+                        <input  class="form-control" type="text" name="empID" id="empID" [(ngModel)]="Newobj.empID">
+                    </div>
+                    <div>
+                        <label for="firstName">First Name</label>&nbsp;
+                        <input  class="form-control" type="text" name="firstName" id="firstName"  [(ngModel)]="Newobj.firstName">
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>&nbsp;
+                        <input class="form-control" type="text" name="lastName" id="lastName"  [(ngModel)]="Newobj.lastName">
+                    </div>
+                    <div>
+                        <label for="email">Employee Mail</label>&nbsp;
+                        <input class="form-control" type="email" name="email" id="email"  [(ngModel)]="Newobj.email">
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" class="btn btn-success" value="ADD Employee" (click)="addEmployee()"> &nbsp;&nbsp;
+                    <input type="reset" class="btn btn-warning" value="resert">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

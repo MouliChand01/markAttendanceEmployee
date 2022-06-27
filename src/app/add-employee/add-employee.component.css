@@ -1,0 +1,13 @@
+.container-margin {
+    margin: 5%;
+}
+a {
+    text-decoration: none;
+}
+.body div{
+    display: inline-block;
+    margin: 20px;
+}
+.header select{
+    display: inline-block;
+}
